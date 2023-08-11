@@ -19,7 +19,12 @@ li {
   margin: 10px 0;
 }
 .totalPrice {
-    background-color: #ccc;
+    display: flex;
+    font-size: larger;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    background-color: grey;
     padding: 4px;
 }
 

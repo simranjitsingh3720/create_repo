@@ -22,5 +22,24 @@
   
   button {
     margin-left: 10px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
   }
   
+  .text {
+    color: white;
+  }
+
+  .quantity_count {
+    margin-left: 8px;
+    color:white;
+  }
+
+  .button_style {
+    margin-left: 8px;
+    background-color:blue;
+    border-radius: 12px;
+  }

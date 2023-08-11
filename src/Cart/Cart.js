@@ -19,7 +19,10 @@ const Cart = ({ cart }) => {
                
             </li>
           ))}
-          <p className='totalPrice'>Total Price: {total}</p>
+          <div className='totalPrice'>
+          <p>Total Price:</p>
+          <span>{total}</span>
+          </div>
         </ul>
       )}
     </div>

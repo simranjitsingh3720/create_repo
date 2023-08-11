@@ -2,10 +2,10 @@ import React from 'react';
 import './ProductList.css';
 
 const ProductList = ({ products, addToCart, removeFromCart, cart }) => {
-
-  console.log("products", products);
-
-  console.log("cart", cart);
+  const getQuantityInCart = productId => {
+    const cartItem = cart.find(item => item.product.id === productId);
+    return cartItem ? cartItem.quantity : 0;
+  };
 
   return (
     <div className="box">
@@ -13,10 +13,11 @@ const ProductList = ({ products, addToCart, removeFromCart, cart }) => {
       <ul>
         {products.map((product) => (
           <li key={product.id}>
-            <span style={{color: 'white'}}>{product.name}</span>
-            <span style={{color: 'white'}}>{product.price}</span>
-            <div>
+            <span  className="text">{product.name}</span>
+            <span className="text">{product.price}</span>
+            <div className='button_style'>
             <button onClick={() => removeFromCart(product)}>-</button>
+            <span className='quantity_count'>{getQuantityInCart(product.id)}</span>
             <button onClick={() => addToCart(product)}>+</button>
             </div>
           </li>
